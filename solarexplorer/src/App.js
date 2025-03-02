@@ -32,7 +32,7 @@ function App() {
     <Router>
       <div className="app">
         <header className="header">
-          <h1>SOLAR</h1>
+          <h1>SolAR Explorer</h1>
           <div className="search-container">
             <input
               type="text"

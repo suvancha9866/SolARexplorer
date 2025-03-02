@@ -210,19 +210,166 @@ main {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.download-btn {
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(45deg, #9945FF, #14F195);
+.repository-container {
+  padding: 2rem;
   color: white;
-  border: none;
-  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.repository-header {
+  margin-bottom: 1.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repository-header h1 {
+  font-size: 2.5rem;
   font-weight: bold;
+  background: linear-gradient(to right, #14F195, #9945FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.repository-address-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: fit-content;
+}
+
+.repository-address-container code {
+  font-family: monospace;
+  color: #14F195;
+  font-size: 0.9rem;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
   transition: all 0.2s;
 }
 
-.download-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.copy-button:hover {
+  color: #14F195;
+}
+
+.repository-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.section-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  color: white;
+  background: linear-gradient(to right, #14F195, #9945FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.member.owner {
+  border-color: rgba(20, 241, 149, 0.2);
+}
+
+.member-type {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.member-address {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.branch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.branch.main-branch {
+  border-color: rgba(20, 241, 149, 0.2);
+}
+
+.branch-name {
+  font-weight: bold;
+  color: white;
+}
+
+.branch-commit {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.repo-url-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.repo-url-container code {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
